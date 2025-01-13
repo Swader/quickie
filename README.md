@@ -12,13 +12,18 @@ This project is built with:
 - [Deno 2.0](https://deno.com/blog/v2)
 - [Vanilla TS](https://www.typescriptlang.org/) via Deno
 - Simple builder to bundle dist (see `build.ts`)
+- Foundry setup for smart contracts
 
 ## How to use
 
+Install [Foundry](https://getfoundry.sh/) on your system. This is needed for smart contracts.
+
 1. Clone the repo
 2. Modify the `src/main.ts` file to your needs, and other html files as needed
-3. Run `deno run build`
-4. Serve whatever ends up in the dist folder on a simple server - IPFS, S3, Arweave, Github Pages, etc.
+3. Run `deno run build` to build the frontend
+4. Run `deno run contracts:deploy` to test the example contracts
+5. Serve whatever ends up in the dist folder on a simple server - IPFS, S3, Arweave, Github Pages, etc.
+6. Deploy your smart contracts by tweaking the `.env` file (copy from `.env.example`) and running `deno run contracts:deploy`
 
 ## License: MIT
 
