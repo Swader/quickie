@@ -1,14 +1,17 @@
 {
   "tasks": {
     "dev": "deno run --watch src/main.ts",
-    "build": "deno run -A build.ts"
+    "build": "deno run -A build.ts",
+    "test:contracts": "cd onchain && forge test"
   },
   "imports": {
     "@luca/esbuild-deno-loader": "jsr:@luca/esbuild-deno-loader@^0.11.0",
-    "esbuild": "npm:esbuild@0.24.0"
+    "esbuild": "npm:esbuild@0.24.0",
+    "hardhat": "npm:hardhat@^2.22.17"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true
-  }
+  },
+  "nodeModulesDir": "auto"
 }
